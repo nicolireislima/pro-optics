@@ -5,7 +5,7 @@
 
     --fundo-menu-lateral: #343232;
     --fundo-claro: #d88d50;
-    --fundo-escuro: #c5c4c4;
+    --fundo-escuro: #959393;
 
     --borda-clara: #ef852e;
     --borda-escura: #9c4600;
@@ -248,5 +248,38 @@ a {
     padding-right: 30px;
 
 }
+
+/* Seções e Titulos */
+section {
+    padding: 60px 0;
+    overflow: hidden;
+    background:#959393; /* clara */
+    /* background: var (--section-clara) */
+}
+.section-bg {
+    /* escura */
+    /* background: var (--section-escura) */
+    background: #343232; 
+    color: var(--texto-claro);
+}
+
+/*Estrutura dp TiTulo Seção */
+.section-title {
+    padding-bottom: 30px;
+}
+
+/* titulo H2 */
+.section-title {
+    color: var(--fundo-menu-lateral);
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.section-title h2::after {
+    
+}
+   
 
 
