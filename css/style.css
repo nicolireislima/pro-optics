@@ -253,6 +253,31 @@ a {
     border-bottom: 3px solid #149ddd;
 }
 
+@media (min-width: 1024px) {
+    #hero {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 1024px) {
+    #hero {
+        background-attachment: fixed;
+    }
+}
+@media (max-width: 768px) {
+    #hero h2 {
+        font-size: 90px;
+        line-height: 1;
+        margin-bottom: 45px;
+
+    }
+}
+
+
+
+
+
+
 
 /* Estrutura Base - Corpo */
 #main {
@@ -323,9 +348,12 @@ section {
 .sobre .content ul {
     list-style: none;
     padding: 0;
-    
+
 }
 
+#hero p {
+    font-size: 28px;
+}
 
 
    
