@@ -32,7 +32,7 @@ Playfair Display:
     --texto-hover: #218591;
     --texto-opaco: #81888c;
 
-    --cor-detalhes: #149ddd;
+    --cor-detalhes: #003e5b;
 
     --texto-titulo-claro: #38E0F2;
     --texto-titulo-escuro: #037F8C;
@@ -143,6 +143,17 @@ a {
 }
 
 /* Ajuste para o Corpo do Conteudo */
+
+/* Estrutura Base - Corpo */
+#main {
+    margin-left: 300px;
+}
+
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
 
 /* menu responsivo */
 @media (max-width: 1199px) {
@@ -279,16 +290,7 @@ a {
 
 
 
-/* Estrutura Base - Corpo */
-#main {
-    margin-left: 300px;
-}
 
-.container {
-    padding-left: 30px;
-    padding-right: 30px;
-
-}
 
 /* Seções e Titulos */
 section {
@@ -348,12 +350,33 @@ section {
 .sobre .content ul {
     list-style: none;
     padding: 0;
-
 }
 
-#hero p {
-    font-size: 28px;
+.sobre .content ul li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
+
+.sobre .content ul strong {
+    margin-right: 5px;
+    font-weight: 700;
+    /* letter-spacing: .5px; */
+    font-family:"Playfair Display", serif;
+}
+
+.sobre .content ul i {
+    color: var(--cor-detalhes);
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+
+
+
+
+
 
 
    
