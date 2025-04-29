@@ -57,6 +57,8 @@
 
     }
 
+    new PureCounter();
+
 
     
 
