@@ -448,6 +448,13 @@ section {
     height: 10px;
 }
 
+.skills .progress-bar {
+    height: 10px;
+    background: rgb(17, 100, 195);
+    transition: 5s;
+    width: 1px;
+}
+
 
 
 
