@@ -33,15 +33,15 @@
     }
 
     // Ativar Botao Menu no modo Mobile
-    
-    on('click', '.mobile-nav-toggle', function() {
+
+    on('click', '.mobile-nav-toggle', function () {
         select('body').classList.toggle('mobile-nav-active')
         this.classList.toggle('bi-list')
         this.classList.toggle('bi-x')
     })
 
     // Efeito de digitação 
-    const typed = select ('.typed');
+    const typed = select('.typed');
 
     if (typed) {
         let typed_strings = typed.getAttribute('data-typed-items')
@@ -61,39 +61,54 @@
 
     /* Função Waypoints */
     // JS para Skills = Habilidades de Vendas
-    
+
     let skilsContent = select('.skills-content');
     if (skilsContent) { // verefica se o elemento existe
         new Waypoint({  //criar uma instancia 
             element: skilsContent,
             offset: '80%',  //janela de visualização
-            handler: function(direction) {
+            handler: function (direction) {
                 let progress = select('.progress .progress-bar', true);
                 progress.forEach((el) => {
                     el.style.width = el.getAttribute('aria-valuenow') + '%'
                 });
             }
-        }) 
+        })
     }
 
 
     //Isotope - Biblioteca para Filtro
     window.addEventListener('load', () => {
-        let portfolioContainer = select(".portfolio-container")
+        let portfolioContainer = select(".portfolio-container");
         if (portfolioContainer) {
             let portfolioIsotope = new Isotope(portfolioContainer, {
                 itemsSelector: '.portfolio-item'
             });
 
-            let portfolioFilters = select('#portfolio-filters', true);
+            // Selecionar todos as Listas (li) do html
+            let portfolioFilters = select('#portfolio-filters li', true);
+
+            on('click', '#portfolio-filters li', function(e) {
+                e.preventDefault();
+                portfolioFilters.forEach(function(el) {
+                    el.classList.remove('filter-active');
+                });
+                this.classList.add('filter-active');
+
+                portfolioIsotope.arrange({
+                    filter: this.getAttribute('data-filter')
+                });
+
+
+            }, true);
         }
-         
-
     });
-        
-
 
     
+
+
+
+
 
 
 })()
